@@ -1,6 +1,4 @@
-import Button__Back from "@/components/Button__Back";
-
-export default function City({ city,back }) {
+export default function City({ city }) {
   const { id, name, description, country, population } = city;
   return (
     <>
@@ -8,11 +6,10 @@ export default function City({ city,back }) {
         <h2>{name}</h2>
         <ul>
           <li>{description}</li>
-          <li>{country}</li>
-          <li>{population}</li>
+          <li style={{fontSize:'small'}}>{country}</li>
+          <li style={{fontFamily:'monospace'}}>{population}</li>
         </ul>
       </article>
-      <Button__Back back={back}/>
     </>
   );
 }
